@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -66,9 +67,10 @@ public class diceRoller {
 		for ( int x = 0; x < show.length; x++ )	{
 			 
 			// show[x] = numbers;
-			 System.out.println("Your roll: " + show[x]);
+			 //System.out.println("Your roll: " + show[x]);
 		 }
-		
+		System.out.println("Your rolls: " + Arrays.toString(show));
+				
 		
 		
 	/*	while ( amountOfRolls <= counter )	{
