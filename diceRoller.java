@@ -16,11 +16,13 @@ public class diceRoller {
 		int numbers = 0;
 		int total = 0; 
 		
+		int save = 0; 
+		
 		System.out.println("Enter the amount of rolls (1-100): " );
 		int store = input.nextInt(); 
 		System.out.println("Enter the amount of sides (2-100):  ");
 		int store2 = input.nextInt(); 
-		
+		int [] show = new int [store];
 	//	System.out.println("Enter the amount of rolls: " + store);
 	//	System.out.println("Enter the amount of sides: " + store2);
 		
@@ -48,15 +50,27 @@ public class diceRoller {
 		//System.out.println("--------");
 		//System.out.println(amountOfRolls);
 		
-		while ( store >= counter )	{
+		while ( store > counter )	{
 			
 			numbers = rand.nextInt(start) + 1;
 			
 			total += numbers;
+			show[counter] += numbers;
+			//System.out.println("Your roll: " + show[counter]);
 			//System.out.println(total);
 			//System.out.println("--------");
 			counter++; 
+					
 		}
+		System.out.println("====");
+		for ( int x = 0; x < show.length; x++ )	{
+			 
+			// show[x] = numbers;
+			 System.out.println("Your roll: " + show[x]);
+		 }
+		
+		
+		
 	/*	while ( amountOfRolls <= counter )	{
 			
 			numbers = rand.nextInt(start) + 1;
@@ -67,6 +81,9 @@ public class diceRoller {
  */		
 		System.out.println("=======");	
 	System.out.println(total);
+	
+	 
+	input.close(); 
 	}
 		
 		
